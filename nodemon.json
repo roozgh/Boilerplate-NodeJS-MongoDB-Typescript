@@ -1,0 +1,7 @@
+{
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "verbose": true,
+  "ext": "ts js json pug",
+  "watch": ["src"],
+  "exec": "node --inspect=5858 -r ts-node/register ./src/server/index.ts"
+}
