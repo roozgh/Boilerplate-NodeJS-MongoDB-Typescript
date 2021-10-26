@@ -5,6 +5,9 @@ if (!MONGO_URL || !MONGO_DATABASE) throw new Error("MongoDB credentials not foun
 
 const { log } = console;
 
+/**
+ * https://mongodb.github.io/node-mongodb-native/4.1/interfaces/MongoOptions.html
+ */
 const connOpts: MongoClientOptions = {
   connectTimeoutMS: 2000,
 };
@@ -19,7 +22,7 @@ export function db(): Db {
 }
 
 /**
- * Takes a collection name and eturns
+ * Takes a collection name and returns
  * a MongoDB 'Collection' Object
  */
 export function coll<T>(tableName: string) {
